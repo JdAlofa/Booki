@@ -9,6 +9,7 @@
     --filter-bg-color: #DEEBFF;
 }
 
+
 /* --------HEADER STYLES------------------------------------------------- */
 header {
     display: flex;
@@ -93,7 +94,7 @@ header {
     gap: 0px;
     border: 1px solid var(--Grey, #c6c6c6);
     background: var(--White, #FFF);
-    border-radius: 15px;
+    border-radius: 16px;
     justify-content: flex-start;
     height: 48px;
 
@@ -478,11 +479,13 @@ footer {
     color: var(--main-color);
 }
 
-/* Le code ci-dessous correspond à la version responsive uniquement */
+
+
 
 /****** Media queries ***********/
 /* Medium devices (tablets, less/equal than 1024px) */
-@media (max-width: 1024px) {
+@media (min-width:850px) and ( max-width: 1142px) {
+    
 
     header {
         width: 100%;
@@ -539,7 +542,7 @@ footer {
 }
 
 /* Small devices (phones, less than 768px) */
-@media (max-width: 767.98px) {
+@media (max-width: 850px) {
     header {
         display: flex;
         flex-direction: column;
@@ -549,10 +552,11 @@ footer {
 
     .main-container {
         padding: 0px 20px 0px 20px;
+        
     }
 
     .topRightMenu {
-        justify-content: space-between;
+        justify-content: space-around;
     }
 
     #searchBar {
@@ -562,9 +566,11 @@ footer {
 
 
     #searchButton {
-        width: 49px;
-        height: 49px;
+        width: 50px;
+        height: 100%;
         border-radius: 15px;
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 0px;
     }
 
     #searchIcon {
@@ -575,13 +581,24 @@ footer {
         display: none;
     }
 
+    #filterBar{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        }
+
     .filtersGroup {
+        display: flex; 
+        flex-direction: row;
         flex-wrap: wrap;
-        justify-content: space-evenly;
+        gap:10px;
+        justify-content:flex-start ;
+
     }
 
     .filters {
-        width: 30%;
+        width: 35%;
+        height: 50px;
         font-size: 13px;
     }
 
@@ -592,6 +609,7 @@ footer {
 
     .hebergements {
         width: 100%;
+        margin-top: 30px;
     }
 
     
